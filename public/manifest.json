@@ -1,0 +1,21 @@
+{
+  "name": "Jardim da Pele - Curso de Skincare",
+  "short_name": "Jardim da Pele",
+  "description": "Transforme sua pele com o curso mais completo de skincare do Brasil",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f43f5e",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
