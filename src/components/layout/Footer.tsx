@@ -33,25 +33,13 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: Instagram,
-      href: "https://instagram.com/draijulianaferreira",
-      label: "@draijulianaferreira",
+      href: "https://instagram.com/dra_julianaferreira",
+      label: "@dra_julianaferreira",
       color: "hover:text-pink-500"
     },
     {
-      icon: Youtube,
-      href: "https://youtube.com/@jardimdapele",
-      label: "Canal no YouTube",
-      color: "hover:text-red-500"
-    },
-    {
-      icon: Facebook,
-      href: "https://facebook.com/jardimdapele",
-      label: "Facebook",
-      color: "hover:text-blue-500"
-    },
-    {
       icon: Linkedin,
-      href: "https://linkedin.com/in/juliana-ferreira",
+      href: "https://linkedin.com/in/dra-juliana-martinsferreira/",
       label: "LinkedIn",
       color: "hover:text-blue-600"
     }
@@ -162,7 +150,7 @@ export default function Footer() {
               {/* Doctor info */}
               <div className="flex items-center space-x-4 bg-neutral-800 rounded-2xl p-6">
                 <Image
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                  src="https://www.drajulianamartins.com.br/juliana_1.png"
                   alt="Dra. Juliana Ferreira"
                   width={60}
                   height={60}
@@ -298,7 +286,7 @@ export default function Footer() {
       </div>
 
       {/* Disclaimer */}
-      <div className="bg-neutral-950 py-6">
+      {/* <div className="bg-neutral-950 py-6">
         <div className="section-container">
           <motion.div 
             className="text-center"
@@ -314,7 +302,7 @@ export default function Footer() {
             </p>
           </motion.div>
         </div>
-      </div>
+      </div> */}
     </footer>
   )
 }

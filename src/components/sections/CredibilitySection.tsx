@@ -76,7 +76,7 @@ export default function CredibilitySection() {
             <div className="relative w-full max-w-md mx-auto lg:mx-0">
               <div className="relative rounded-3xl overflow-hidden shadow-strong">
                 <Image
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                  src="https://www.drajulianamartins.com.br/juliana_1.png"
                   alt="Dra. Juliana Ferreira"
                   width={400}
                   height={500}

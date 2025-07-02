@@ -10,67 +10,122 @@ export default function OfferSection() {
   const courseModules = [
     {
       number: "01",
-      title: "Fundamentos da Pele",
-      description: "Como sua pele realmente funciona",
-      lessons: 8,
-      duration: "2h 30min",
+      title: "Boas-vindas e Introdução ao Método (Sementes do Cuidado)",
+      description: "Conhecendo o método Skin Garden e preparando-se para a transformação da sua pele",
+      lessons: 3,
+      duration: "1h 30min",
       topics: [
-        "Anatomia e fisiologia da pele",
-        "Tipos de pele REAIS (não aqueles de revista)",
-        "Como identificar o que sua pele precisa",
-        "Mitos vs. Realidade científica"
+        "Apresentação da Dra. Juliana e do Método Skin Garden",
+        "Objetivos e transformações esperadas no curso",
+        "Como acessar os materiais e participar das atividades"
       ]
     },
     {
       number: "02", 
-      title: "Produtos que Funcionam",
-      description: "Como escolher produtos corretos",
-      lessons: 10,
-      duration: "3h 15min",
+      title: "Diagnóstico: Entendendo a Sua Pele (Reconhecendo o Solo)",
+      description: "Identifique corretamente seu tipo de pele e aprenda a interpretar suas necessidades",
+      lessons: 4,
+      duration: "2h 15min",
       topics: [
-        "Leitura de rótulos como uma expert",
-        "Ingredientes que realmente importam",
-        "Como não cair em pegadinhas de marketing",
-        "Produtos baratos que superam caros"
+        "O que é o tipo de pele (seca, oleosa, mista, sensível, acneica)",
+        "Formulário de diagnóstico completo e explicativo",
+        "Como interpretar seu diagnóstico e adaptar a rotina",
+        "Erros comuns na identificação do tipo de pele"
       ]
     },
     {
       number: "03",
-      title: "Rotina Perfeita",
-      description: "Sua rotina personalizada",
-      lessons: 12,
-      duration: "4h 00min",
+      title: "Fundamentos: Conhecendo os Ativos e Produtos (Nutrição das Raízes)",
+      description: "Entenda os ingredientes ativos e aprenda a escolher produtos de forma inteligente",
+      lessons: 5,
+      duration: "3h 00min",
       topics: [
-        "Rotina matinal eficaz",
-        "Rotina noturna reparadora", 
-        "Adaptações por estação",
-        "Rotina para pele com acne/manchas/rugas"
+        "A importância de entender os ingredientes ativos",
+        "Classificação dos produtos por função (limpeza, hidratação, proteção, tratamento)",
+        "Como ler rótulos, composições e promessas de produtos",
+        "Ativos mais usados no mercado e suas aplicações (ex.: ácido hialurônico, niacinamida, retinol, vitamina C, AHAs, etc.)",
+        "Cuidados com modismos e promessas milagrosas"
       ]
     },
     {
       number: "04",
-      title: "Problemas Específicos",
-      description: "Soluções para cada necessidade",
-      lessons: 15,
-      duration: "5h 20min",
+      title: "Limpeza de Pele (Preparação do Solo)",
+      description: "Domine a arte da limpeza facial e prepare sua pele para receber os tratamentos",
+      lessons: 5,
+      duration: "2h 45min",
       topics: [
-        "Acne: do adolescente ao adulto",
-        "Manchas e melasma",
-        "Rugas e linhas de expressão",
-        "Rosácea e sensibilidade"
+        "A importância da limpeza para saúde e eficácia dos produtos",
+        "Tipos de produtos: sabonetes, géis, águas micelares, óleos de limpeza",
+        "Double cleansing: quando faz sentido",
+        "Limpeza para diferentes tipos de pele",
+        "Demonstração prática + como monitorar a resposta da pele"
       ]
     },
     {
       number: "05",
-      title: "Manutenção Vitalícia",
-      description: "Como manter os resultados",
-      lessons: 6,
-      duration: "2h 10min",
+      title: "Proteção Solar (Cuidados com o Sol)",
+      description: "Proteja sua pele dos danos solares com conhecimento científico e aplicação correta",
+      lessons: 5,
+      duration: "2h 30min",
       topics: [
-        "Ajustes por idade",
-        "Como não retroceder",
-        "Quando procurar ajuda profissional",
-        "Mantendo a motivação"
+        "Entendendo os danos solares e sua relação com manchas, rugas e doenças",
+        "Tipos de protetores: físico vs químico, com ou sem cor, oil-free, etc.",
+        "FPS e PPD: como interpretar e escolher o ideal",
+        "Reaplicação, resistência à água, e uso com maquiagem",
+        "Dicas práticas para facilitar o uso diário"
+      ]
+    },
+    {
+      number: "06",
+      title: "Hidratação (Regando o Solo)",
+      description: "Entenda como manter sua pele hidratada, nutrida e com a barreira de proteção fortalecida",
+      lessons: 4,
+      duration: "2h 00min",
+      topics: [
+        "O que é hidratação e como ela age na pele",
+        "Diferença entre hidratação, emoliência e oclusão",
+        "Texturas e fórmulas: como escolher (géis, loções, cremes, séruns)",
+        "Aplicação correta + massagem facial"
+      ]
+    },
+    {
+      number: "07",
+      title: "Tratamentos Específicos",
+      description: "Aprenda a usar ativos específicos para tratar problemas da pele de forma segura e eficaz",
+      lessons: 4,
+      duration: "2h 45min",
+      topics: [
+        "Clareadores, antiacne, anti-idade, calmantes",
+        "Como encaixar esses tratamentos na rotina",
+        "Ordem de aplicação e combinação segura de ativos",
+        "Rotinas de uso noturno e cuidados com sensibilização"
+      ]
+    },
+    {
+      number: "08",
+      title: "Cuidados Extras e Avançados (Rituais de Encantamento)",
+      description: "Eleve sua rotina com cuidados especiais e técnicas avançadas para potencializar os resultados",
+      lessons: 4,
+      duration: "2h 15min",
+      topics: [
+        "Esfoliantes: físicos x químicos (quando e como usar)",
+        "Máscaras: detox, calmantes, iluminadoras",
+        "Cuidados com a área dos olhos, pescoço e colo",
+        "Rotinas semanais e ciclos mensais"
+      ]
+    },
+    {
+      number: "09",
+      title: "Rotina Ideal e Manutenção (Colheita e Continuidade)",
+      description: "Monte sua rotina personalizada e aprenda a mantê-la ao longo da vida",
+      lessons: 6,
+      duration: "3h 00min",
+      topics: [
+        "Como montar uma rotina completa e adaptada à sua pele",
+        "Rotinas simplificadas para manhã e noite",
+        "Ajustes por clima, ciclo hormonal e fase da vida",
+        "Checklist semanal e planner de skincare",
+        "Como manter disciplina sem exageros"
       ]
     }
   ]
@@ -250,7 +305,7 @@ export default function OfferSection() {
           <div className="mt-8 text-center">
             <div className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-2xl p-6 max-w-2xl mx-auto">
               <p className="text-lg font-semibold">
-                🎯 Total: 51 aulas | 17 horas de conteúdo premium
+                🎯 Total: 40 aulas | 22 horas de conteúdo premium
               </p>
               <p className="text-sm opacity-90 mt-2">
                 Acesso vitalício + atualizações gratuitas
@@ -358,7 +413,7 @@ export default function OfferSection() {
             {/* Value breakdown */}
             <div className="space-y-4 mb-8">
               <div className="flex justify-between items-center py-2 border-b border-neutral-200">
-                <span>Curso Completo (51 aulas)</span>
+                <span>Curso Completo (40 aulas)</span>
                 <span className="font-semibold">{formatPrice(997)}</span>
               </div>
               <div className="flex justify-between items-center py-2 border-b border-neutral-200">
