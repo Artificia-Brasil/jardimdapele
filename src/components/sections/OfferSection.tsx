@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { CheckCircle, Clock, Users, Shield, Gift, PlayCircle, BookOpen, Smartphone } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import Card from '@/components/ui/Card'
-import { formatPrice, formatInstallments } from '@/lib/utils'
+import { formatPrice, formatInstallments, scrollToElement } from '@/lib/utils'
 
 export default function OfferSection() {
   const courseModules = [
@@ -182,11 +182,11 @@ export default function OfferSection() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-            E É POR ISSO QUE EU CRIEI <span className="gradient-text">ESSE CURSO</span>
+            E É POR ISSO QUE EU CRIEI O CURSO <span className="gradient-text">JARDIM DA PELE</span>
           </h2>
           
           <p className="text-xl text-neutral-700 max-w-4xl mx-auto leading-relaxed">
@@ -199,7 +199,7 @@ export default function OfferSection() {
           className="bg-white rounded-3xl p-12 shadow-medium mb-16 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
           viewport={{ once: true }}
         >
           <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-8">
@@ -244,7 +244,7 @@ export default function OfferSection() {
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.2, delay: 0.4 }}
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-center text-neutral-900 mb-12">
@@ -257,7 +257,7 @@ export default function OfferSection() {
                 key={module.number}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                transition={{ duration: 0.2, delay: 0.5 + index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <Card className="p-8 hover:shadow-strong">
@@ -319,7 +319,7 @@ export default function OfferSection() {
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.2, delay: 0.6 }}
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-center text-neutral-900 mb-12">
@@ -332,7 +332,7 @@ export default function OfferSection() {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                transition={{ duration: 0.2, delay: 0.7 + index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <Card className="p-6 relative">
@@ -369,7 +369,7 @@ export default function OfferSection() {
           className="bg-gradient-to-r from-neutral-900 to-neutral-800 text-white rounded-3xl p-12 mb-16 text-center"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.2, delay: 0.8 }}
           viewport={{ once: true }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-8">
@@ -402,7 +402,7 @@ export default function OfferSection() {
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          transition={{ duration: 0.2, delay: 1.0 }}
           viewport={{ once: true }}
         >
           <Card featured className="max-w-2xl mx-auto text-center p-12">
@@ -469,7 +469,7 @@ export default function OfferSection() {
           className="bg-gradient-to-r from-red-500 to-red-600 text-white rounded-3xl p-12 text-center"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.2, delay: 1.2 }}
           viewport={{ once: true }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-6">
@@ -500,6 +500,22 @@ export default function OfferSection() {
               GARANTO MINHA VAGA COM 50% OFF
             </span>
           </Button>
+        </motion.div>
+
+        {/* Navigation Button */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: 1.4 }}
+          viewport={{ once: true }}
+        >
+          <button
+            onClick={() => scrollToElement('faq-section')}
+            className="bg-gradient-to-r from-neutral-800 to-neutral-700 text-white px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-transform duration-200 shadow-strong"
+          >
+            Ainda tem dúvidas? Ver perguntas frequentes →
+          </button>
         </motion.div>
       </div>
     </section>

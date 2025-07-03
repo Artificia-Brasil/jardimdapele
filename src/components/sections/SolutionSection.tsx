@@ -47,18 +47,18 @@ export default function SolutionSection() {
   ]
 
   const handleCTAClick = () => {
-    scrollToElement('offer-section')
+    scrollToElement('credibility-section')
   }
 
   return (
-    <section className="section-padding bg-white">
+    <section id="solution-section" className="section-padding bg-white">
       <div className="section-container">
         {/* Not alone section */}
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8">
@@ -96,7 +96,7 @@ export default function SolutionSection() {
           className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
@@ -133,7 +133,7 @@ export default function SolutionSection() {
           className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.2, delay: 0.4 }}
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-neutral-900 mb-6">
@@ -152,7 +152,7 @@ export default function SolutionSection() {
                   className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-soft"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.5 + index * 0.05 }}
+                  transition={{ duration: 0.2, delay: 0.5 + index * 0.05 }}
                   viewport={{ once: true }}
                 >
                   <span className="text-red-500 text-xl">😤</span>
@@ -180,7 +180,7 @@ export default function SolutionSection() {
           className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.2, delay: 0.6 }}
           viewport={{ once: true }}
         >
           <div className="bg-gradient-to-r from-neutral-900 to-neutral-800 text-white rounded-3xl p-12 text-center">
@@ -205,7 +205,7 @@ export default function SolutionSection() {
           className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.2, delay: 0.8 }}
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-neutral-900 mb-6">
@@ -223,7 +223,7 @@ export default function SolutionSection() {
                 className="bg-white rounded-3xl p-8 shadow-medium hover:shadow-strong transition-all duration-300 text-center group hover:-translate-y-2"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+                transition={{ duration: 0.2, delay: 0.9 + index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${component.color} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -247,7 +247,7 @@ export default function SolutionSection() {
           className="text-center bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-3xl p-12"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.2, delay: 1.2 }}
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

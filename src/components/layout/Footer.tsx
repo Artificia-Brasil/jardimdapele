@@ -61,7 +61,7 @@ export default function Footer() {
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -110,7 +110,7 @@ export default function Footer() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
             viewport={{ once: true }}
           >
             {trustSignals.map((signal, index) => (
@@ -135,7 +135,7 @@ export default function Footer() {
               className="lg:col-span-2"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
               viewport={{ once: true }}
             >
               <div className="mb-6">
@@ -168,7 +168,7 @@ export default function Footer() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
               viewport={{ once: true }}
             >
               <h4 className="text-lg font-semibold mb-6 text-white">Contato & Suporte</h4>
@@ -213,7 +213,7 @@ export default function Footer() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 0.3, delay: 0.8 }}
               viewport={{ once: true }}
             >
               <h4 className="text-lg font-semibold mb-6 text-white">Redes Sociais</h4>
@@ -258,7 +258,7 @@ export default function Footer() {
             className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
+            transition={{ duration: 0.3, delay: 1.0 }}
             viewport={{ once: true }}
           >
             <div className="text-center md:text-left">
@@ -292,7 +292,7 @@ export default function Footer() {
             className="text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+            transition={{ duration: 0.3, delay: 1.2 }}
             viewport={{ once: true }}
           >
             <p className="text-xs text-neutral-500 max-w-4xl mx-auto leading-relaxed">

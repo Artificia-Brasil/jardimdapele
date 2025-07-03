@@ -19,7 +19,7 @@ export default function ProblemSection() {
     },
     {
       icon: Volume2,
-      title: "RUÍDO",
+      title: "Ruído",
       description: "Todo mundo está no mesmo barco — repetindo marketing e desinformação — até parecer que isso é tudo que existe. A confusão cresce, a frustração aumenta e você fica obcecada com sua pele… Ignorando a solução mais óbvia.",
       color: "text-purple-500"
     }
@@ -34,7 +34,7 @@ export default function ProblemSection() {
             className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
             viewport={{ once: true }}
           >
             Podemos concordar que <span className="gradient-text">sua vida não precisa girar em torno da sua pele?</span>
@@ -44,7 +44,7 @@ export default function ProblemSection() {
             className="text-xl text-neutral-700 mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
             viewport={{ once: true }}
           >
             Conquistar uma pele bonita parece cada vez mais difícil
@@ -54,7 +54,7 @@ export default function ProblemSection() {
             className="text-lg text-neutral-600 font-medium"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
             viewport={{ once: true }}
           >
             Mas não pelos motivos que você pensa.
@@ -67,7 +67,7 @@ export default function ProblemSection() {
             className="text-xl text-center text-neutral-700 mb-12 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
             viewport={{ once: true }}
           >
             Não é por causa dos seus genes, da sua dieta ou dos seus hormônios — é por causa de <span className="font-bold text-primary-600">3 coisas irritantes:</span>
@@ -81,7 +81,7 @@ export default function ProblemSection() {
                 className="bg-gradient-to-br from-neutral-50 to-white p-8 rounded-3xl shadow-soft hover:shadow-medium transition-all duration-300 border border-neutral-100"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
@@ -108,7 +108,7 @@ export default function ProblemSection() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
             viewport={{ once: true }}
           >
             <div className="max-w-3xl mx-auto">
@@ -142,7 +142,7 @@ export default function ProblemSection() {
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.3, delay: 0.6 }}
           viewport={{ once: true }}
         >
           <p className="text-xl text-neutral-600 max-w-2xl mx-auto">

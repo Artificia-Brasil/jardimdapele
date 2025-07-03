@@ -65,14 +65,14 @@ export default function FAQSection() {
   }
 
   return (
-    <section className="section-padding bg-white">
+    <section id="faq-section" className="section-padding bg-white">
       <div className="section-container max-w-4xl">
         {/* Section Header */}
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
@@ -92,7 +92,7 @@ export default function FAQSection() {
               className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
+              transition={{ duration: 0.2, delay: index * 0.05 }}
               viewport={{ once: true }}
             >
               <button
@@ -117,7 +117,7 @@ export default function FAQSection() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    transition={{ duration: 0.2, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
                     <div className="p-6 pt-0 bg-white bg-opacity-70">
@@ -137,7 +137,7 @@ export default function FAQSection() {
           className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-3xl p-12 text-center"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.2, delay: 0.6 }}
           viewport={{ once: true }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-6">
@@ -191,7 +191,7 @@ export default function FAQSection() {
           className="mt-16 grid md:grid-cols-3 gap-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.2, delay: 0.8 }}
           viewport={{ once: true }}
         >
           <div className="text-center p-6 bg-green-50 rounded-2xl">

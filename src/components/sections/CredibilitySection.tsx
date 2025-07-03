@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { GraduationCap, Award, Users, Heart, BookOpen, Stethoscope } from 'lucide-react'
+import { scrollToElement } from '@/lib/utils'
 
 export default function CredibilitySection() {
   const credentials = [
@@ -44,14 +45,14 @@ export default function CredibilitySection() {
   ]
 
   return (
-    <section className="section-padding bg-gradient-to-br from-secondary-50 via-white to-primary-50">
+    <section id="credibility-section" className="section-padding bg-gradient-to-br from-secondary-50 via-white to-primary-50">
       <div className="section-container">
         {/* Main introduction */}
         <motion.div 
           className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8">
@@ -70,7 +71,7 @@ export default function CredibilitySection() {
             className="text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.2 }}
             viewport={{ once: true }}
           >
             <div className="relative w-full max-w-md mx-auto lg:mx-0">
@@ -96,12 +97,12 @@ export default function CredibilitySection() {
               </div>
               
               {/* Floating stats */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-2xl p-4 shadow-strong animate-float">
+              {/* <div className="absolute -top-4 -right-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-2xl p-4 shadow-strong animate-float">
                 <div className="text-center">
                   <div className="text-2xl font-bold">7+</div>
                   <div className="text-xs">Anos transformando vidas</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
@@ -109,7 +110,7 @@ export default function CredibilitySection() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.2, delay: 0.4 }}
             viewport={{ once: true }}
           >
             <div className="space-y-8">
@@ -134,7 +135,7 @@ export default function CredibilitySection() {
                     className="bg-white rounded-2xl p-4 shadow-soft border border-primary-100"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.6 + index * 0.1 }}
                     viewport={{ once: true }}
                   >
                     <div className="flex items-start space-x-3">
@@ -156,7 +157,7 @@ export default function CredibilitySection() {
           className="bg-white rounded-3xl p-12 shadow-medium mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.2, delay: 0.8 }}
           viewport={{ once: true }}
         >
           <div className="max-w-4xl mx-auto">
@@ -201,7 +202,7 @@ export default function CredibilitySection() {
           className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          transition={{ duration: 0.2, delay: 1.0 }}
           viewport={{ once: true }}
         >
           <div className="bg-gradient-to-r from-neutral-900 to-neutral-800 text-white rounded-3xl p-12">
@@ -242,7 +243,7 @@ export default function CredibilitySection() {
           className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.2, delay: 1.2 }}
           viewport={{ once: true }}
         >
           <h3 className="text-3xl md:text-4xl font-bold text-center text-neutral-900 mb-12">
@@ -272,7 +273,7 @@ export default function CredibilitySection() {
           className="text-center bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-12"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
+          transition={{ duration: 0.2, delay: 1.4 }}
           viewport={{ once: true }}
         >
           <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-8">
@@ -315,7 +316,7 @@ export default function CredibilitySection() {
           className="mt-20 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.6 }}
+          transition={{ duration: 0.2, delay: 1.6 }}
           viewport={{ once: true }}
         >
           <div className="bg-primary-500 text-white rounded-3xl p-12">
@@ -334,6 +335,22 @@ export default function CredibilitySection() {
               </p>
             </div>
           </div>
+        </motion.div>
+
+        {/* Navigation Button */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: 1.8 }}
+          viewport={{ once: true }}
+        >
+          <button
+            onClick={() => scrollToElement('testimonials-section')}
+            className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-transform duration-200 shadow-strong"
+          >
+            Ver o que nossas alunas estão dizendo →
+          </button>
         </motion.div>
       </div>
     </section>

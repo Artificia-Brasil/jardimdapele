@@ -98,7 +98,7 @@ const jsonLd = {
     'jobTitle': 'Dermatologista e Especialista em Estética',
     'image': '/dr-juliana.jpg',
     'sameAs': [
-      'https://instagram.com/draijulianaferreira',
+      'https://instagram.com/dra_julianaferreira',
       'https://linkedin.com/in/juliana-ferreira'
     ]
   },

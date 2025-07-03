@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Button from '@/components/ui/Button'
 import { scrollToElement } from '@/lib/utils'
-import { Heart, Star, Users } from 'lucide-react'
+import { Heart, Star, Stethoscope, Users } from 'lucide-react'
 
 export default function HeroSectionV2() {
   const handleCTAClick = () => {
@@ -102,7 +102,10 @@ export default function HeroSectionV2() {
                   {/* Professional badge overlay */}
                   <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-white/50">
                     <div className="text-center">
-                      <h3 className="font-bold text-neutral-900 text-lg mb-1 font-sans">Dra. Juliana Ferreira</h3>
+                      <div className="flex items-center justify-center space-x-2 mb-1">
+                        <Stethoscope className="w-5 h-5 text-primary-500" />
+                        <h3 className="font-bold text-neutral-900 text-lg font-sans">Dra. Juliana Ferreira</h3>
+                      </div>
                       <p className="text-sm text-neutral-600 mb-2 font-sans">Especialista em Estética Avançada</p>
                       {/* <div className="flex items-center justify-center gap-1">
                         {[...Array(5)].map((_, i) => (
