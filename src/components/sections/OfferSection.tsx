@@ -322,11 +322,11 @@ export default function OfferSection() {
           transition={{ duration: 0.2, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold text-center text-neutral-900 mb-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-center text-neutral-900 mb-8 md:mb-12 leading-tight">
             Bônus Exclusivos <span className="gradient-text">(Apenas Hoje)</span>
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {bonuses.map((bonus, index) => (
               <motion.div
                 key={index}
@@ -335,9 +335,9 @@ export default function OfferSection() {
                 transition={{ duration: 0.2, delay: 0.7 + index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="p-6 relative">
+                <Card className="p-6 relative overflow-visible">
                   {bonus.highlight && (
-                    <div className="absolute -top-3 right-4 bg-gradient-to-r from-orange-400 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    <div className="absolute -top-3 right-2 md:right-4 bg-gradient-to-r from-orange-400 to-red-500 text-white px-2 md:px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                       {bonus.highlight}
                     </div>
                   )}

@@ -140,7 +140,7 @@ export default function TestimonialsSection() {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -205,22 +205,22 @@ export default function TestimonialsSection() {
 
         {/* Video testimonials section */}
         <motion.div 
-          className="bg-white rounded-3xl p-12 shadow-medium text-center mb-16"
+          className="bg-white rounded-3xl p-6 md:p-12 shadow-medium text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, delay: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-neutral-900 mb-6 leading-tight">
             Quer ver mais depoimentos em vídeo?
           </h3>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="relative bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8 aspect-video flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300">
+              <div key={i} className="relative bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-6 md:p-8 aspect-video flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-0 h-0 border-l-[12px] border-l-primary-500 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                    <div className="w-0 h-0 border-l-[10px] md:border-l-[12px] border-l-primary-500 border-t-[6px] md:border-t-[8px] border-t-transparent border-b-[6px] md:border-b-[8px] border-b-transparent ml-1"></div>
                   </div>
                   <p className="text-sm font-semibold text-neutral-700">
                     Depoimento {i}
@@ -233,14 +233,14 @@ export default function TestimonialsSection() {
             ))}
           </div>
           
-          <p className="text-neutral-600 mt-6">
+          <p className="text-neutral-600 mt-6 text-sm md:text-base">
             📱 Acesse nossa página no Instagram para ver dezenas de outros depoimentos
           </p>
         </motion.div>
 
         {/* Before and After Gallery */}
         <motion.div 
-          className="bg-gradient-to-r from-neutral-900 to-neutral-800 text-white rounded-3xl p-12 text-center"
+          className="bg-gradient-to-r from-neutral-900 to-neutral-800 text-white rounded-3xl p-6 md:p-12 text-center"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.2, delay: 1.0 }}
