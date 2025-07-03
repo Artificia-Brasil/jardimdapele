@@ -2,6 +2,7 @@
 
 import { AlertTriangle, TrendingDown, Volume2, RefreshCw, DollarSign, HelpCircle, Frown } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { scrollToElement } from '@/lib/utils'
 
 export default function ProblemSectionV2() {
   const problems = [
@@ -60,7 +61,7 @@ export default function ProblemSectionV2() {
   ]
 
   return (
-    <section className="section-padding bg-white">
+    <section id="problem-section" className="section-padding bg-white">
       <div className="section-container">
         {/* Opening statement */}
         <div className="text-center max-w-4xl mx-auto mb-16">
@@ -68,7 +69,7 @@ export default function ProblemSectionV2() {
             className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 font-sans"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
             viewport={{ once: true }}
           >
             Podemos concordar que <span className="gradient-text">sua vida não precisa girar em torno da sua pele?</span>
@@ -78,7 +79,7 @@ export default function ProblemSectionV2() {
             className="text-xl text-neutral-700 mb-8 font-sans"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
             viewport={{ once: true }}
           >
             Conquistar uma pele bonita parece cada vez mais difícil
@@ -88,7 +89,7 @@ export default function ProblemSectionV2() {
             className="text-lg text-neutral-600 font-medium font-sans"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.2 }}
             viewport={{ once: true }}
           >
             Mas não pelos motivos que você pensa.
@@ -101,7 +102,7 @@ export default function ProblemSectionV2() {
             className="text-xl text-center text-neutral-700 mb-12 leading-relaxed font-sans"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.3 }}
+            transition={{ duration: 0.2, delay: 0.3 }}
             viewport={{ once: true }}
           >
             Não é por causa dos seus genes, da sua dieta ou dos seus hormônios — é por causa de <span className="font-bold text-primary-600">3 coisas irritantes:</span>
@@ -115,7 +116,7 @@ export default function ProblemSectionV2() {
                 className="bg-gradient-to-br from-neutral-50 to-white p-8 rounded-3xl shadow-soft hover:shadow-medium transition-all duration-300 border border-neutral-100"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
+                transition={{ duration: 0.2, delay: 0.4 + index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
@@ -142,7 +143,7 @@ export default function ProblemSectionV2() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: 0.5 }}
+            transition={{ duration: 0.2, delay: 0.5 }}
             viewport={{ once: true }}
           >
             <div className="max-w-4xl mx-auto">
@@ -158,7 +159,7 @@ export default function ProblemSectionV2() {
                     className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-soft border border-white/60"
                     initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                    transition={{ duration: 0.2, delay: 0.6 + index * 0.1 }}
                     viewport={{ once: true }}
                   >
                     <div className="flex items-start gap-4">
@@ -182,7 +183,7 @@ export default function ProblemSectionV2() {
                 className="text-center bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-soft border border-white/60"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 1.0 }}
+                transition={{ duration: 0.2, delay: 1.0 }}
                 viewport={{ once: true }}
               >
                 <p className="text-lg font-semibold text-primary-600 font-sans">
@@ -198,7 +199,7 @@ export default function ProblemSectionV2() {
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.6 }}
+          transition={{ duration: 0.2, delay: 0.6 }}
           viewport={{ once: true }}
         >
           <p className="text-xl text-neutral-600 max-w-2xl mx-auto font-sans">
@@ -206,9 +207,12 @@ export default function ProblemSectionV2() {
           </p>
           
           <div className="mt-8">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full font-semibold font-sans">
+            <button 
+              onClick={() => scrollToElement('cost-analysis-section')}
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full font-semibold font-sans hover:scale-105 transition-transform duration-200"
+            >
               Continue lendo para descobrir...
-            </div>
+            </button>
           </div>
         </motion.div>
       </div>

@@ -7,11 +7,11 @@ import { Heart, Star, Users } from 'lucide-react'
 
 export default function HeroSectionV2() {
   const handleCTAClick = () => {
-    scrollToElement('offer-section')
+    scrollToElement('problem-section')
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen lg:flex lg:items-center lg:justify-center overflow-hidden pt-16 md:pt-24 lg:pt-0">
       {/* Enhanced background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-pink-25 to-orange-50" />
       <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent" />
@@ -23,23 +23,23 @@ export default function HeroSectionV2() {
       <div className="absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-br from-orange-200 to-red-200 rounded-full opacity-40 animate-float animation-delay-600"></div>
       
       <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 lg:items-center">
           {/* Content */}
-          <div className="text-center lg:text-left space-y-10">
+          <div className="text-center lg:text-left space-y-6 lg:space-y-10">
 
             {/* Main headline - Using sans-serif consistently */}
-            <div className="space-y-6 animate-fade-in-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight font-sans">
+            <div className="space-y-4 lg:space-y-6 animate-fade-in-up">
+              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-neutral-900 leading-tight font-sans">
                 O CURSO QUE <span className="bg-gradient-to-r from-primary-500 via-secondary-500 to-rose-500 bg-clip-text text-transparent">VAI TRANSFORMAR</span> SUA PELE E SEU BOLSO
               </h1>
               
-              <h2 className="text-xl md:text-2xl text-neutral-700 font-medium leading-relaxed font-sans">
+              <h2 className="text-lg md:text-xl lg:text-2xl text-neutral-700 font-medium leading-relaxed font-sans">
                 Pule anos de tentativa e erro e domine <span className="text-primary-600 font-bold">A ARTE DE CUIDAR MUITO BEM DA SUA PELE</span>
               </h2>
             </div>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-200 leading-relaxed font-sans">
+            <p className="text-base md:text-lg lg:text-xl text-neutral-600 max-w-2xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-200 leading-relaxed font-sans">
               Aprenda tudo o que você precisa para conquistar uma pele limpa em casa — <strong className="text-neutral-800">sem dietas, pílulas ou produtos milagrosos!</strong>
             </p>
 

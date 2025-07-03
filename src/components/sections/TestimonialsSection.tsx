@@ -2,16 +2,18 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Star, Quote } from 'lucide-react'
+import { Star, Quote, Instagram } from 'lucide-react'
 import Card from '@/components/ui/Card'
+import { scrollToElement } from '@/lib/utils'
 
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Maria Silva",
-      age: "32 anos",
-      profession: "Advogada",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c96ca1e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      name: "Úrsula Teles",
+      age: "35 anos",
+      profession: "Estudante",
+      image: "/ursula.jpg",
+      instagram: "https://instagram.com/ursula.teles",
       rating: 5,
       text: "Depois de 15 anos lutando contra acne, finalmente entendi o que estava fazendo de errado. O curso da Dra. Juliana mudou minha vida! Minha pele nunca esteve tão bonita e eu nunca me senti tão confiante.",
       transformation: "Acne severa → Pele limpa em 3 meses",
@@ -22,6 +24,7 @@ export default function TestimonialsSection() {
       age: "28 anos", 
       profession: "Designer",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      instagram: "https://instagram.com/ana.design",
       rating: 5,
       text: "Gastei uma fortuna em produtos caros que não funcionavam. Com as técnicas do curso, aprendi a escolher produtos corretos gastando muito menos. Minha rotina agora é simples e eficaz!",
       transformation: "Rotina complicada → 5 minutos por dia",
@@ -32,6 +35,7 @@ export default function TestimonialsSection() {
       age: "35 anos",
       profession: "Empresária", 
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      instagram: "https://instagram.com/carol.entrepreneur",
       rating: 5,
       text: "Como mãe de dois filhos, eu não tinha tempo para uma rotina complicada. O método da Dra. Juliana me ensinou uma rotina simples que cabe na minha realidade. Resultados incríveis em pouco tempo!",
       transformation: "Pele cansada → Glow natural aos 35",
@@ -42,6 +46,7 @@ export default function TestimonialsSection() {
       age: "24 anos",
       profession: "Estudante",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      instagram: "https://instagram.com/bia.skincare",
       rating: 5,
       text: "Sempre tive pele oleosa e cheia de cravos. Achava que era normal para minha idade. Descobri que estava cuidando da pele de forma totalmente errada! Agora tenho a pele que sempre sonhei.",
       transformation: "Pele oleosa com cravos → Textura uniforme",
@@ -52,6 +57,7 @@ export default function TestimonialsSection() {
       age: "42 anos",
       profession: "Psicóloga",
       image: "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      instagram: "https://instagram.com/fer.psicologa",
       rating: 5,
       text: "Depois dos 40, achei que era tarde demais para ter uma pele bonita. O curso me provou o contrário! Aprendi que idade não é desculpa - é sobre ter os conhecimentos certos. Minha pele está melhor que aos 30!",
       transformation: "Sinais de idade → Pele renovada",
@@ -62,6 +68,7 @@ export default function TestimonialsSection() {
       age: "29 anos",
       profession: "Enfermeira",
       image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      instagram: "https://instagram.com/ju.enfermeira",
       rating: 5,
       text: "Mesmo sendo da área da saúde, eu não sabia cuidar da minha própria pele! O curso abriu meus olhos. Agora entendo a ciência por trás de cada produto e cada passo da rotina. Resultado: pele impecável!",
       transformation: "Conhecimento teórico → Aplicação prática",
@@ -93,14 +100,14 @@ export default function TestimonialsSection() {
   ]
 
   return (
-    <section className="section-padding bg-gradient-to-br from-pink-50 via-rose-50 to-white">
+    <section id="testimonials-section" className="section-padding bg-gradient-to-br from-pink-50 via-rose-50 to-white">
       <div className="section-container">
         {/* Section Header */}
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
@@ -118,7 +125,7 @@ export default function TestimonialsSection() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
           viewport={{ once: true }}
         >
           {stats.map((stat, index) => (
@@ -139,10 +146,20 @@ export default function TestimonialsSection() {
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+              transition={{ duration: 0.2, delay: 0.4 + index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card variant="testimonial" className="h-full hover:shadow-strong transition-all duration-300">
+              <Card variant="testimonial" className="h-full hover:shadow-strong transition-all duration-300 relative">
+                {/* Instagram logo in top right corner */}
+                <a 
+                  href={testimonial.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-4 right-4 z-20 bg-gradient-to-r from-pink-500 to-purple-600 p-2 rounded-full shadow-lg hover:scale-110 transition-transform duration-200"
+                >
+                  <Instagram className="w-4 h-4 text-white" />
+                </a>
+
                 {/* Header with photo and info */}
                 <div className="flex items-center space-x-4 mb-6 relative z-10">
                   <Image
@@ -191,7 +208,7 @@ export default function TestimonialsSection() {
           className="bg-white rounded-3xl p-12 shadow-medium text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.2, delay: 0.8 }}
           viewport={{ once: true }}
         >
           <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">
@@ -226,7 +243,7 @@ export default function TestimonialsSection() {
           className="bg-gradient-to-r from-neutral-900 to-neutral-800 text-white rounded-3xl p-12 text-center"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          transition={{ duration: 0.2, delay: 1.0 }}
           viewport={{ once: true }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-6">
@@ -265,7 +282,7 @@ export default function TestimonialsSection() {
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.2, delay: 1.2 }}
           viewport={{ once: true }}
         >
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -299,6 +316,22 @@ export default function TestimonialsSection() {
               </div>
             </div>
           </div>
+        </motion.div>
+
+        {/* Navigation Button */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: 1.4 }}
+          viewport={{ once: true }}
+        >
+          <button
+            onClick={() => scrollToElement('offer-section')}
+            className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-transform duration-200 shadow-strong"
+          >
+            Conhecer o Curso Jardim da Pele →
+          </button>
         </motion.div>
       </div>
     </section>
